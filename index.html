@@ -2,62 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COMSITEC | Tecnología para la industria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Tecnología confiable para operaciones industriales</h1>
-      <p>Equipamiento corporativo, estandarización y renovación de infraestructura tecnológica</p>
-      <a href="#contacto" class="btn-primary">Hablemos</a>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
 
-  <!-- ENFOQUE -->
-  <section class="section">
-    <h2>¿Cómo apoyamos a la industria?</h2>
+  <div class="hero-content">
+    <h1>Tecnología confiable para<br>operaciones industriales</h1>
     <p>
-      En <strong>COMSITEC</strong> acompañamos a empresas industriales en la provisión y renovación de
-      <strong>hardware corporativo confiable</strong>, alineando la tecnología con las necesidades reales
-      de la operación.
+      Equipamiento corporativo, estandarización y renovación de infraestructura tecnológica
+      alineada a la operación real.
     </p>
+    <a href="#contacto" class="btn-primary">Hablemos</a>
+  </div>
+</section>
 
-    <ul class="checklist">
-      <li>Equipamiento corporativo</li>
-      <li>Estandarización tecnológica</li>
-      <li>Marcas líderes</li>
-      <li>Soporte especializado</li>
-    </ul>
-  </section>
+<!-- CONTENIDO -->
+<section class="section glass">
+  <h2>¿Cómo apoyamos a la industria?</h2>
+  <p>En <strong class="brand">COMSITEC</strong> acompañamos a empresas industriales en la provisión
+  y renovación de <strong>hardware corporativo confiable</strong>, priorizando continuidad,
+  orden y escalabilidad.</p>
+  
 
-  <!-- FORMULARIO -->
-  <section class="section dark" id="contacto">
-    <h2>Conversemos</h2>
-    <p>Cuéntanos brevemente tu necesidad y te contactamos.</p>
+  <div class="cards">
+    <div class="card">Equipamiento corporativo</div>
+    <div class="card">Estandarización tecnológica</div>
+    <div class="card">Marcas líderes</div>
+    <div class="card">Soporte especializado</div>
+  </div>
+</section>
 
-    <form action="https://formsubmit.co/jlizon@comsitec.tech" method="POST" class="form">
+<!-- FORMULARIO -->
+<section class="section dark" id="contacto">
+  <h2>Conversemos</h2>
+  <p class="subtitle">
+    Déjanos tus datos y conversemos sobre cómo optimizar tu operación tecnológica.
+  </p>
 
-      <!-- Seguridad -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_subject" value="Nuevo contacto desde Landing COMSITEC">
-      <input type="hidden" name="_next" value="https://JLIZON07.github.io/Comsitec-Holding/gracias.html">
+  <form
+    action="https://formsubmit.co/jlizon@comsitec.tech"
+    method="POST"
+    class="form">
 
-      <input type="text" name="empresa" placeholder="Empresa" required>
-      <input type="text" name="nombre" placeholder="Nombre y cargo" required>
-      <input type="email" name="email" placeholder="Correo corporativo" required>
-      <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp">
-      <textarea name="mensaje" placeholder="¿Qué estás buscando mejorar en tu operación?"></textarea>
+    <!-- CONFIG FORM -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Nuevo contacto desde Landing COMSITEC">
+    <input type="hidden" name="_next" value="https://TUUSUARIO.github.io/TUREPO/gracias.html">
 
-      <button type="submit" class="btn-primary">Enviar</button>
-    </form>
-  </section>
+    <input type="text" name="empresa" placeholder="Empresa" required>
+    <input type="text" name="nombre" placeholder="Nombre y cargo" required>
+    <input type="email" name="email" placeholder="Correo corporativo" required>
+    <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp">
+    <textarea name="mensaje" placeholder="Cuéntanos brevemente tu necesidad"></textarea>
 
-  <!-- WHATSAPP -->
+    <button type="submit" class="btn-primary full">Enviar</button>
+  </form>
+</section>
+
+<!-- WHATSAPP -->
   <a href="https://wa.me/51960856348?text=Hola%20quisiera%20evaluar%20la%20continuidad%20tecnológica%20de%20mi%20operación"
      class="whatsapp-float"
      target="_blank">
@@ -66,3 +76,4 @@
 
 </body>
 </html>
+

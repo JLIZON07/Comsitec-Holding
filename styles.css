@@ -1,116 +1,168 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
   color: #0b2a4a;
-  background: #ffffff;
-  line-height: 1.6;
+  background: #f4f6f8;
 }
 
 /* HERO */
 .hero {
-  min-height: 90vh;
-  background: linear-gradient(135deg, #0b2a4a, #1f4f7a);
+  position: relative;
+  min-height: 95vh;
+  background:
+    radial-gradient(circle at top right, #1f4f7a, #0b2a4a);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
+  padding: 60px 20px;
+  overflow: hidden;
 }
 
+.hero.small {
+  min-height: 80vh;
+}
+
+/* LOGO MARCA DE AGUA */
+.hero::after {
+  content: "";
+  background: url("logo-comsitec.png") no-repeat center;
+  background-size: 60%;
+  opacity: 0.05;
+  position: absolute;
+  inset: 0;
+}
+
+/* OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11,42,74,0.85),
+    rgba(11,42,74,0.95)
+  );
+}
+
+/* HERO CONTENT */
 .hero-content {
-  max-width: 800px;
-  color: #ffffff;
+  position: relative;
+  max-width: 900px;
+  color: #fff;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  opacity: 0.95;
+  margin-bottom: 35px;
 }
 
-/* BOTONES */
+/* BUTTON */
 .btn-primary {
-  background: #f5a623;
+  background: linear-gradient(135deg, #f5a623, #ffbf55);
   color: #0b2a4a;
-  padding: 14px 30px;
-  border-radius: 30px;
+  padding: 14px 36px;
+  border-radius: 40px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   display: inline-block;
+  transition: transform .2s, box-shadow .2s;
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
 }
 
-/* SECCIONES */
+.btn-primary.full {
+  width: 100%;
+}
+
+/* SECTIONS */
 .section {
-  padding: 70px 20px;
-  max-width: 900px;
-  margin: auto;
+  max-width: 1100px;
+  margin: -80px auto 80px;
+  padding: 60px 30px;
+  border-radius: 24px;
+}
+
+.section.glass {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
 }
 
 .section.dark {
-  background: #f4f6f8;
+  background: #ffffff;
+  margin-top: 0;
   text-align: center;
 }
 
 .section h2 {
-  margin-bottom: 20px;
-}
-
-.checklist {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.checklist li {
   margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
+  text-align: center;         /* 👈 centra el texto */
+
 }
 
-.checklist li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #f5a623;
-  font-weight: bold;
+.section p {
+  max-width: 760px;
+  margin: 0 auto 15px auto;   /* 👈 centra el bloque */
+  text-align: center;         /* 👈 centra el texto */
+  line-height: 1.6;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  font-weight: 600 ;
+  text-align: center;           /* 👈 CLAVE */
+  display: flex;                /* 👈 CLAVE */
+  align-items: center;          /* 👈 CLAVE */
+  justify-content: center;      /* 👈 CLAVE */
 }
 
 /* FORM */
 .form {
-  max-width: 500px;
-  margin: 30px auto 0;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .form input,
 .form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin-bottom: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: 12px;
+  border: 1px solid #ccd6e0;
 }
 
 .form textarea {
-  resize: vertical;
-  min-height: 100px;
+  min-height: 110px;
 }
 
-.form button {
-  width: 100%;
-  border: none;
-  cursor: pointer;
+.brand {
+  color: #0b2a4a;
+  font-weight: 800;
 }
 
 /* WHATSAPP */
